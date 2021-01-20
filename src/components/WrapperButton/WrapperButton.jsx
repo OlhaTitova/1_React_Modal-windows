@@ -9,52 +9,44 @@ class WrapperButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggleModalDelete: false,
-            toggleModalConfirm: false,
+            isOpenModalDelete: false,
+            isOpenModalConfirm: false,
         }
     }
 
-    openModalDelete = () => {
-        this.setState({ toggleModalDelete: true })
+    toggleModalDelete = () => {
+        this.setState({ isOpenModalDelete: !this.state.isOpenModalDelete })
     }
 
-    openModalConfirm = () => {
-        this.setState({ toggleModalConfirm: true })
-    }
-
-    closeModalDelete = () => {
-        this.setState({ toggleModalDelete: false })
-    }
-
-    closeModalConfirm = () => {
-        this.setState({ toggleModalConfirm: false })
+    toggleModalConfirm = () => {
+        this.setState({ isOpenModalConfirm: !this.state.isOpenModalConfirm })
     }
 
     render() {
         return (
             <div className="wrapper-button">
                 <Button
-                    onClick={this.openModalDelete}
+                    onClick={this.toggleModalDelete}
                     className={this.props.className}
                     text="Open first modal"
                     backgroundColor='btn-delete'
                 />
                 <Button
-                    onClick={this.openModalConfirm}
+                    onClick={this.toggleModalConfirm}
                     className={this.props.className}
                     text="Open second modal"
                     backgroundColor="btn-confirm"
                 />
                 {
-                    this.state.toggleModalDelete &&
+                    this.state.isOpenModalDelete &&
                     <ModalDelete
-                        onClose={this.closeModalDelete}
+                        onClose={this.toggleModalDelete}
                     />
                 }
                 {
-                    this.state.toggleModalConfirm &&
+                    this.state.isOpenModalConfirm &&
                     <ModalConfirm
-                        onClose={this.closeModalConfirm}
+                        onClose={this.toggleModalConfirm}
                     />
                 }
             </div>
