@@ -1,0 +1,33 @@
+.btn {
+    min-width: 100px;
+    min-height: 40px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 7px 15px;
+    line-height: 1.5;
+    border-radius: 4px;
+    margin: 0 15px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.btn-delete {
+    background-color: #d44637;
+}
+
+.btn-confirm {
+    background-color: #016BE1;
+}
+
+.btn-delete-modal {
+    background-color: #c03f31;
+}
+
+.btn-confirm-modal {
+    background-color: #016BE1;
+}
