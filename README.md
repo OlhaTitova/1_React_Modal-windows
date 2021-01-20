@@ -1,6 +1,6 @@
 # 1_React_Modal-windows
 
-**DEMO:**
+**DEMO:** https://olhatitova.github.io/1_React_Modal-windows/build/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
